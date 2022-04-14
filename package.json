@@ -1,8 +1,8 @@
 {
   "scripts": {
-    "prod": "webpack --mode=production --node-env=production",
-    "dev": "webpack --mode=development",
-    "serve": "webpack serve"
+    "p": "webpack --mode=production --node-env=production",
+    "d": "webpack --mode=development",
+    "s": "webpack serve"
   },
   "devDependencies": {
     "css-loader": "^6.7.1",
