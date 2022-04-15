@@ -1,1 +1,53 @@
 // @use "./reset";
+
+$right_boxes_width:390px;
+$left_boxes_width: 390px;
+$upper_boxes_height: 390px;
+$bottom_boxes_height: 390px;
+
+
+body {
+  color:#ccc;
+  background-color: #333;
+}
+
+div {
+  margin: 0rem;
+  padding: 0rem;
+}
+
+.scene {
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;// または center
+  align-items: center;
+  align-content: center;
+}
+
+.panel {
+  margin: 0.4rem;
+  padding: 0.4rem;
+  background-color: #111;
+  color: #ccc;
+}
+
+.image_panel {
+  width:  $left_boxes_width;
+  height: $upper_boxes_height;
+}
+
+.message_panel {
+  width:  $left_boxes_width;
+  height: $bottom_boxes_height;
+}
+
+.info_panel {
+  width:  $right_boxes_width;
+  height: $upper_boxes_height;
+}
+
+.command_panel {
+  width:  $right_boxes_width;
+  height: $bottom_boxes_height;
+}
