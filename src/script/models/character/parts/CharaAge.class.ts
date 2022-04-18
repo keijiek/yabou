@@ -5,6 +5,10 @@ export class CharaAge {
     this._birthday = birthday;
   }
 
+  updateBirthday(newBirthday:Date):void {
+    this._birthday = newBirthday;
+  }
+
   age(today:Date):number {
     return Math.floor( (this._8digitDate(today) - this._8digitDate(this._birthday)) / 10_000 );
   }

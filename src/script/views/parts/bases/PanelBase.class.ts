@@ -4,3 +4,4 @@ export class PanelBase extends HTMLDivElement {
     this.classList.add('panel');
   }
 }
+customElements.define('panel-base', PanelBase, { extends: 'div' });

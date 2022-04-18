@@ -6,3 +6,4 @@ export class InfoPanel extends PanelBase {
     this.classList.add('info_panel');
   }
 }
+customElements.define('info-panel', InfoPanel, { extends: 'div' });

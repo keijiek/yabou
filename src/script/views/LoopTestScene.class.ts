@@ -8,3 +8,4 @@ export class LoopTestScene extends SceneBase {
 
 
 }
+customElements.define('looptest-scene', LoopTestScene, { extends: 'div' });

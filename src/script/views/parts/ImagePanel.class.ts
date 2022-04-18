@@ -6,3 +6,4 @@ export class ImagePanel extends PanelBase {
     this.classList.add('image_panel');
   }
 }
+customElements.define('image-panel', ImagePanel, { extends: 'div' });

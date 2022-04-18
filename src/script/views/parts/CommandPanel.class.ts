@@ -6,3 +6,4 @@ export class CommandPanel extends PanelBase {
     this.classList.add('command_panel');
   }
 }
+customElements.define('command-panel', CommandPanel, { extends: 'div' });
