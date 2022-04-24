@@ -9,7 +9,8 @@ export class MessagePanel extends PanelBase {
   }
 
   display():void {
-    
+    const strings:string[] = this.messages;
+    this.textContent = strings.join('<br>');
   }
 }
 customElements.define('message-panel', MessagePanel, { extends: 'div' });

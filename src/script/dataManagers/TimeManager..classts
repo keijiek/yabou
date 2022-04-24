@@ -1,0 +1,9 @@
+import { GameDate } from '../models/time/GameDate.class';
+
+export class TimeManager {
+  private constructor(){}
+
+  static passTurn(gameDate:GameDate):void {
+    gameDate.setMonth(gameDate.getMonth() + 1);
+  }
+}

@@ -1,9 +1,9 @@
 // @use "./reset";
 
-$right_boxes_width:390px;
-$left_boxes_width: 390px;
-$upper_boxes_height: 390px;
-$bottom_boxes_height: 390px;
+$left_boxes_width: 430px;
+$right_boxes_width:270px;
+$upper_boxes_height: 395px;
+$bottom_boxes_height: 195px;
 
 
 body {
@@ -17,15 +17,26 @@ div {
 }
 
 .scene {
+  background-color: #222;
   margin: 0;
+  width: 800px;
+  height: 600px;
+  padding: 0px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: flex-start;// または center
   align-items: center;
   align-content: center;
 }
 
+.panels_container {
+  display: flex;
+  flex-direction: row;
+  border: #fff 1px solid;
+}
+
 .panel {
+  border: 1px #fff solid;
   margin: 0.4rem;
   padding: 0.4rem;
   background-color: #111;

@@ -4,7 +4,7 @@ import { ImagePanel } from "../parts/ImagePanel.class";
 import { MessagePanel } from "../parts/MessagePanel.class";
 import { PanelBase } from "../parts/bases/PanelBase.class";
 
-export class SceneBase extends HTMLDivElement {
+export class SceneViewBase extends HTMLDivElement {
   protected _imagePanel:ImagePanel;
   protected _messagePanel:MessagePanel;
   protected _infoPanel:InfoPanel;
@@ -19,23 +19,25 @@ export class SceneBase extends HTMLDivElement {
     this._infoPanel = new InfoPanel();
     this._commandPanel = new CommandPanel();
 
-    this.appendChild(this._container([this._imagePanel, this._infoPanel]));
-    this.appendChild(this._container([this._messagePanel, this._commandPanel]));
+    this.appendChild(this._panelsContainer([this._imagePanel, this._infoPanel]));
+    this.appendChild(this._panelsContainer([this._messagePanel, this._commandPanel]));
   }
 
-  private _container(panels:PanelBase[]):HTMLDivElement {
+  setButtons(buttons:HTMLButtonElement[]):void {
+    this._commandPanel.setButtons(buttons);
+  }
+
+  private _panelsContainer(panels:PanelBase[]):HTMLDivElement {
     const container = this._flexContainerDiv();
+    this.classList.add('panels_container');
     panels.forEach(panel => container.appendChild(panel));
     return container;
   }
 
   private _flexContainerDiv():HTMLDivElement {
     const div = document.createElement('div');
-    div.style.display = 'flex';
-    div.style.padding = '0px';
-    div.style.margin = '0px';
     return div;
   }
 
 }
-customElements.define('scene-base', SceneBase, { extends: 'div' });
+customElements.define('scene-base', SceneViewBase, { extends: 'div' });

@@ -5,8 +5,9 @@ export class GameDate extends Date {
   constructor() {
     super('1970-1-1');
   }
-  setYear(fullYear:'/^\d{4}$/'):void {
 
+  setYear(fullYear:number):void {
+    this.setFullYear(fullYear);
   }
 }
 
